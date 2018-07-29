@@ -40,6 +40,7 @@ var VideoMain = _vue2.default.component('VideoMain', {
     computed: {},
     methods: {
         selectedAddress: function selectedAddress(val) {
+
             this.address = val.label + this.formVideo.vipAddress;
         },
         playVideo: function playVideo() {
@@ -60,7 +61,7 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, ".video .ivu-divider-inner-text {\n  font-size: 16px;\n  font-weight: 600;\n}\n.video .v-frame {\n  margin-top: 30px;\n  width: 100%;\n  height: 650px;\n}\n", ""]);
+exports.push([module.i, ".video .ivu-divider-inner-text {\n  font-size: 16px;\n  font-weight: 600;\n}\n.video .v-frame {\n  margin-top: 30px;\n  width: 100%;\n  height: 600px;\n  border: 1px solid #eeeeee;\n}\n", ""]);
 
 // exports
 
@@ -76,28 +77,13 @@ exports.push([module.i, ".video .ivu-divider-inner-text {\n  font-size: 16px;\n 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var dataList = [{
-    id: 9,
-    address: "http://www.ibb6.com/x1/?url="
-}, {
-    id: 11,
-    address: "http://www.82190555.com/index/qqvod.php?url="
-}, {
-    id: 13,
-    address: "http://api.pucms.com/?url="
-}, {
-    id: 14,
-    address: "http://aikan-tv.com/?url="
-}, {
-    id: 15,
-    address: "http://vip.jlsprh.com/index.php?url="
-}, {
-    id: 16,
-    address: "http://www.82190555.com/index/qqvod.php?url="
-}, {
-    id: 17,
-    address: "http://api.pucms.com/?url="
-}, {
+var dataList = [
+
+// {
+//     id: 17,
+//     address: "http://api.pucms.com/?url="
+// },
+{
     id: 18,
     address: "http://api.xfsub.com/index.php?url="
 }, {
@@ -304,7 +290,7 @@ exports.dataList = dataList;
 /***/ 365:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blog-box video\">\r\n    <Card :bordered=\"false\">\r\n        <p slot=\"title\" style=\"font-size: 16px;\">视频资源</p>\r\n       <div class=\"v-box\">\r\n           <Form :model=\"formVideo\" :label-width=\"80\">\r\n               <FormItem label=\"vip视频地址\">\r\n                   <Input v-model=\"formVideo.vipAddress\" placeholder=\"拷贝你要观看的VIP视频地址\"></Input>\r\n               </FormItem>\r\n               <Row  :gutter=\"22\">\r\n                   <Col span=\"18\">\r\n                   <FormItem label=\"选择解析源\">\r\n                       <Select v-model=\"formVideo.addressId\" filterable :label-in-value=\"true\" @on-change=\"selectedAddress\">\r\n                           <Option v-for=\"(item,index) in addressList\" :value=\"item.id\" :key=\"index\">{{ item.address }}</Option>\r\n                       </Select>\r\n                   </FormItem>\r\n                   </Col>\r\n                   <Col span=\"6\" >\r\n                   <Button @click=\"playVideo\">播放</Button>\r\n                   </Col>\r\n               </Row>\r\n           </Form>\r\n\r\n           <div class=\"v-frame\">\r\n                <iframe :src=\"address\" frameborder=\"0\"  width=\"100%\" height=\"100%\"></iframe>\r\n           </div>\r\n       </div>\r\n    </Card>\r\n</div>"
+module.exports = "<div class=\"blog-box video\">\r\n    <Card :bordered=\"false\">\r\n        <p slot=\"title\" style=\"font-size: 16px;\">视频资源</p>\r\n       <div class=\"v-box\">\r\n           <Form :model=\"formVideo\" :label-width=\"80\">\r\n               <FormItem label=\"vip视频地址\">\r\n                   <Input v-model=\"formVideo.vipAddress\" placeholder=\"拷贝你要观看的VIP视频地址\"></Input>\r\n               </FormItem>\r\n               <Row  :gutter=\"22\">\r\n                   <Col span=\"18\">\r\n                   <FormItem label=\"选择解析源\">\r\n                       <Select v-model=\"formVideo.addressId\" filterable :label-in-value=\"true\" @on-change=\"selectedAddress\">\r\n                           <Option v-for=\"(item,index) in addressList\" :value=\"item.id\" :key=\"index\">{{ item.address }}</Option>\r\n                       </Select>\r\n                   </FormItem>\r\n                   </Col>\r\n                   <Col span=\"6\" >\r\n                   <Button @click=\"playVideo\">播放</Button>\r\n                   </Col>\r\n               </Row>\r\n           </Form>\r\n\r\n           <div class=\"v-frame\">\r\n                <iframe ref=\"frames\" :src=\"address\"  allowfullscreen=\"ture\" frameborder=\"0\"  width=\"100%\" height=\"100%\"></iframe>\r\n           </div>\r\n       </div>\r\n    </Card>\r\n</div>"
 
 /***/ }),
 

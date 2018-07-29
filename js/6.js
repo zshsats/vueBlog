@@ -62,7 +62,7 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, ".appStart {\n  height: 100%;\n  width: 100%;\n  background: #eee;\n}\n.appStart .blog-header {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 60px;\n  background-color: #495060;\n}\n.appStart .blog-header .ivu-menu-horizontal {\n  width: 900px;\n  float: right;\n}\n.appStart .blog-content {\n  width: 100%;\n  height: 100%;\n  padding-top: 75px;\n  position: relative;\n}\n.appStart .blog-box {\n  width: 80%;\n  height: 100%;\n  margin: 0 auto;\n  overflow-y: auto;\n  position: relative;\n  overflow-x: hidden;\n}\n.appStart .ivu-select-dropdown {\n  z-index: 9999999;\n}\n", ""]);
+exports.push([module.i, ".appStart {\n  height: 100%;\n  width: 100%;\n  background: #eee;\n}\n.appStart .blog-header {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 60px;\n  background-color: #515a6e;\n}\n.appStart .blog-header .ivu-menu-horizontal {\n  width: 900px;\n  float: right;\n}\n.appStart .blog-content {\n  width: 100%;\n  height: 100%;\n  padding-top: 75px;\n  position: relative;\n}\n.appStart .blog-box {\n  width: 80%;\n  height: 100%;\n  margin: 0 auto;\n  overflow-y: auto;\n  position: relative;\n  overflow-x: hidden;\n}\n.appStart .ivu-select-dropdown {\n  z-index: 9999999;\n}\n", ""]);
 
 // exports
 
