@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 350:
+/***/ 351:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14,29 +14,49 @@ var _vue = __webpack_require__(65);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _data = __webpack_require__(374);
+var _data = __webpack_require__(376);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tpl = __webpack_require__(375);
+var tpl = __webpack_require__(377);
 
-__webpack_require__(376);
-var lookVideo = _vue2.default.component('lookVideo', {
+__webpack_require__(378);
+var Course = _vue2.default.component('Course', {
     template: tpl,
-    components: {},
     data: function data() {
         return {
-            lookList: _data.dataList
+            classList: [{
+                id: 0,
+                icon: "ios-folder-open",
+                name: "Js书籍"
+            }, {
+                id: 1,
+                icon: "ios-folder-open",
+                name: "CSS书籍"
+            }, {
+                id: 2,
+                icon: "ios-folder-open",
+                name: "HTML5书籍"
+            }],
+            contentList: _data.dataList,
+            classConten: [],
+            selectedTitle: "PPT模板资源"
 
         };
     },
     created: function created() {},
 
     computed: {},
-    methods: {}
+    methods: {
+        getMenu: function getMenu(val) {
+            var that = this;
+            that.selectedTitle = that.classList[val].name;
+            that.classConten = that.contentList[val];
+        }
+    }
 });
 
-exports.default = lookVideo;
+exports.default = Course;
 
 /***/ }),
 
@@ -48,14 +68,14 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".course .menu-box {\n  width: 240px;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.course .menu-box .ivu-menu {\n  height: 100%;\n}\n.course .conten-box {\n  width: auto;\n  height: 100%;\n  margin-left: 240px;\n  background: #fff;\n}\n.course .ivu-row {\n  margin-bottom: 15px;\n}\n.course .t-item {\n  height: 250px;\n  margin-bottom: 15px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 374:
+/***/ 376:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64,26 +84,34 @@ exports.push([module.i, "", ""]);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var dataList = [{
-    id: 1,
-    title: "1",
-    info: "1",
-    address: "1",
-    password: "1"
-}];
+
+
+var dataList = [[{
+    id: 10,
+    title: "JS征程",
+    webAdress: "http://www.1ppt.com/"
+}], [{
+    id: 10,
+    title: "JS征程",
+    webAdress: "http://www.1ppt.com/"
+}], [{
+    id: 10,
+    title: "JS征程",
+    webAdress: "http://www.1ppt.com/"
+}]];
 
 exports.dataList = dataList;
 
 /***/ }),
 
-/***/ 375:
+/***/ 377:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blog-box video\">\r\n    <Card :bordered=\"false\">\r\n        <p slot=\"title\" style=\"font-size: 16px;\">免费看电影</p>\r\n        <div class=\"l-box\">\r\n            <div class=\"l-item\" v-for=\"(item,index) in lookList\" :key=\"index\" >\r\n                <Divider>{{item.title}}</Divider>\r\n                <p><span style=\"font-size: 16px;font-weight: 600\">简介:</span>{{item.info}}</p>\r\n                <p><span style=\"font-size: 16px;font-weight: 600\">地址:</span>{{item.address}}</p>\r\n                <p><span style=\"font-size: 16px;font-weight: 600\">提取码:</span>{{item.password}}</p>\r\n            </div>\r\n        </div>\r\n    </Card>\r\n</div>"
+module.exports = "<div class=\"blog-box course\">\r\n    <div class=\"menu-box\">\r\n        <Menu active-name=\"1\" @on-select=\"getMenu\">\r\n            <MenuItem :name=\"item.id\" v-for=\"(item,index) in classList\" :key=\"index\">\r\n                <Icon :type=\"item.icon\" />\r\n                {{item.name}}\r\n            </MenuItem>\r\n        </Menu>\r\n    </div>\r\n    <div class=\"conten-box\">\r\n        <Card :bordered=\"false\">\r\n            <p slot=\"title\">{{selectedTitle}}</p>\r\n            <Row :gutter=\"20\">\r\n                <Col :xs=\"24\" :sm=\"12\" :md=\"8\" :lg=\"6\" v-for=\"(item,index) in classConten\" :key=\"index\" >\r\n                <Card class=\"t-item\">\r\n                    <div style=\"text-align:center\">\r\n                        <h3>{{item.title}}</h3>\r\n                        <p style=\"text-align: left\">{{item.info}}</p>\r\n                    </div>\r\n                </Card>\r\n                </Col>\r\n            </Row>\r\n\r\n        </Card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
-/***/ 376:
+/***/ 378:
 /***/ (function(module, exports, __webpack_require__) {
 
 

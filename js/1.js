@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 351:
+/***/ 352:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14,37 +14,29 @@ var _vue = __webpack_require__(65);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _data = __webpack_require__(377);
+var _data = __webpack_require__(379);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tpl = __webpack_require__(378);
+var tpl = __webpack_require__(380);
 
-__webpack_require__(379);
-var VideoGuide = _vue2.default.component('VideoGuide', {
+__webpack_require__(381);
+var tool = _vue2.default.component('tool', {
     template: tpl,
     components: {},
     data: function data() {
         return {
-            split3: 0.5,
-            split4: 0.5,
-            lineList: _data.dataList,
-            address: ""
+            toolList: _data.dataList
 
         };
     },
     created: function created() {},
 
     computed: {},
-    methods: {
-        openLine: function openLine(item) {
-            this.address = item.address;
-            window.open(this.address);
-        }
-    }
+    methods: {}
 });
 
-exports.default = VideoGuide;
+exports.default = tool;
 
 /***/ }),
 
@@ -56,14 +48,14 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, ".video-guide .g-box {\n  padding: 15px;\n}\n.video-guide .l-item {\n  background: #fff;\n  padding: 15px;\n}\n", ""]);
+exports.push([module.i, ".tool .t-box {\n  height: 100%;\n}\n.tool .ivu-row {\n  margin-bottom: 15px;\n}\n.tool .t-item {\n  height: 350px;\n  margin-bottom: 15px;\n}\n.tool .t-img {\n  height: 150px;\n  width: auto;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 377:
+/***/ 379:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74,23 +66,36 @@ Object.defineProperty(exports, "__esModule", {
 });
 var dataList = [{
     id: 1,
-    title: "4K屋",
-    info: "4K屋提供最全的最新电视剧,2018最新电影,韩国电视剧、香港TVB电视剧、日本动漫、日剧、美剧、综艺的在线观看...",
-    address: "http://www.kkkkmao.com/"
+    title: "Snipaste",
+    imgUrl: "https://zshsats.github.io/vueBlog/assets/image/logo1.png",
+    info: "Snipaste 是一个简单但强大的截图工具,也可以让你将截图贴回到屏幕上",
+    address: "https://zh.snipaste.com/download.html"
+}, {
+    id: 2,
+    title: "Everything",
+    imgUrl: "https://zshsats.github.io/vueBlog/assets/image/logo2.png",
+    info: "Everything是速度最快的文件搜索软件，可以瞬间搜索到你需要的文件。如果你用过Windows自Everything是速度最快的文件搜索软件，可以瞬间搜索到你需要的文件。",
+    address: "http://www.voidtools.com/downloads/"
+}, {
+    id: 3,
+    title: "Sumatra PDF ",
+    imgUrl: "https://zshsats.github.io/vueBlog/assets/image/logo3.png",
+    info: " Sumatra PDF是一款开源的pdf阅读器。它的功能极度精简,速度很快,可查看中文pdf",
+    address: "https://sumatra-pdf.en.softonic.com/"
 }];
 
 exports.dataList = dataList;
 
 /***/ }),
 
-/***/ 378:
+/***/ 380:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"blog-box video-guide\">\r\n    <div class=\"g-box\">\r\n        <Row :gutter=\"22\">\r\n            <Col span=\"12\">\r\n                <div class=\"l-item\" v-for=\"(item,index) in lineList\" :key=\"index\" @click=\"openLine(item)\">\r\n                    <Divider>{{item.title}}</Divider>\r\n                    <p><span style=\"font-size: 16px;font-weight: 600\">简介:</span>{{item.info}}</p>\r\n                    <p><span style=\"font-size: 16px;font-weight: 600\">地址:</span>{{item.address}}</p>\r\n                </div>\r\n            </Col>\r\n            <Col span=\"12\">\r\n                <Card :bordered=\"false\">\r\n                    <p slot=\"title\">如何免费看最新的大片</p>\r\n                    <div class=\"\">\r\n                        <Divider>方法一:</Divider>\r\n                        <p><span style=\"font-size: 16px;font-weight: 600\">第一步:</span>\r\n                            打开浏览器搜素磁力搜素,搜素你要观看的电影\r\n                        </p>\r\n                        <p><span style=\"font-size: 16px;font-weight: 600\">第二步:</span>\r\n                            打开下载即可\r\n                        </p>\r\n                    </div>\r\n                    <div class=\"\">\r\n                        <Divider>方法二:</Divider>\r\n                        <p><span style=\"font-size: 16px;font-weight: 600\"></span>\r\n                            打开浏览器搜电影名+迅雷下载,搜素你要观看的电影,找到后,打开下载\r\n                        </p>\r\n\r\n                    </div>\r\n                    <div class=\"\">\r\n                        <Divider>方法三:</Divider>\r\n                        <p><span style=\"font-size: 16px;font-weight: 600\"></span>\r\n                            打开浏览器搜电影名+百度云,搜素你要观看的电影,找到后,打开下载\r\n                        </p>\r\n\r\n                    </div>\r\n                </Card>\r\n            </Col>\r\n        </Row>\r\n    </div>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"blog-box tool\">\r\n    <div class=\"t-box\">\r\n        <Card :bordered=\"false\">\r\n            <p slot=\"title\">常用电脑小工具</p>\r\n            <Row :gutter=\"20\">\r\n                <Col :xs=\"24\" :sm=\"12\" :md=\"8\" :lg=\"6\" v-for=\"(item,index) in toolList\" :key=\"index\" >\r\n                <Card class=\"t-item\">\r\n                    <div style=\"text-align:center\">\r\n                        <img class=\"t-img\" :src=\"item.imgUrl\">\r\n                        <h3>{{item.title}}</h3>\r\n                        <p style=\"text-align: left\">{{item.info}}</p>\r\n                    </div>\r\n                </Card>\r\n                </Col>\r\n            </Row>\r\n        </Card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
-/***/ 379:
+/***/ 381:
 /***/ (function(module, exports, __webpack_require__) {
 
 

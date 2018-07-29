@@ -1,4 +1,4 @@
-webpackJsonp([9],[
+webpackJsonp([8],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15318,7 +15318,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_iview2.default);
 
 var startMain = function startMain() {
-    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 354));
+    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 353));
 };
 var app = new _vue2.default({
     router: _router2.default,
@@ -61665,28 +61665,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _vue2.default.use(_vueRouter2.default);
 var Home = function Home() {
-    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 346));
+    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 346));
 };
 var VideoMain = function VideoMain() {
     return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 347));
 };
 var Book = function Book() {
-    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 348));
+    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 348));
 };
 var Resource = function Resource() {
-    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 349));
+    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 349));
 };
 var LookVideo = function LookVideo() {
-    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 350));
-};
-var VideoGuide = function VideoGuide() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 351));
+    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 350));
 };
 var Course = function Course() {
-    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 352));
+    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 351));
 };
 var Tool = function Tool() {
-    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 353));
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 352));
 };
 var routes = [{
     path: '/', redirect: "/home", component: Home
@@ -61700,8 +61697,6 @@ var routes = [{
     path: '/resource', component: Resource
 }, {
     path: '/course', component: Course
-}, {
-    path: '/videoGuide', component: VideoGuide
 }, {
     path: '/lookVideo', component: LookVideo
 }, {
